@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Form - Styled</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .form-container {
+            background: white;
+            width: 500px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .section-title {
+            font-weight: bold;
+            border-bottom: 1px solid #000;
+            margin: 15px 0 10px 0;
+            padding-bottom: 5px;
+        }
+        .form-group {
+            display: flex;
+            margin-bottom: 8px;
+            align-items: flex-start;
+        }
+        .label {
+            width: 140px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .input-content {
+            flex: 1;
+        }
+        input[type="text"], input[type="email"], select, textarea {
+            width: 95%;
+            padding: 4px;
+            border: 1px solid #777;
+            font-size: 13px;
+        }
+        .radio-group, .checkbox-group {
+            font-size: 13px;
+        }
+        .captcha {
+            font-family: "Courier New", monospace;
+            font-size: 24px;
+            letter-spacing: 8px;
+            margin: 10px 0;
+            color: #555;
+        }
+        .footer {
+            margin-top: 20px;
+            background: #eee;
+            padding: 10px;
+            text-align: right;
+            border-top: 1px solid #ccc;
+        }
+        button {
+            padding: 3px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <form>
+        <div class="section-title">Basic Info</div>
+        
+        <div class="form-group">
+            <div class="label">Employee ID</div>
+            <div class="input-content">9</div>
+        </div>
+
+        <div class="form-group">
+            <div class="label">Last Name</div>
+            <div class="input-content">Dodsworth</div>
+        </div>
+
+        <div class="form-group">
+            <div class="label">First Name</div>
+            <div class="input-content"><input type="text" value="Anne"></div>
+        </div>
+
+        <div class="form-group">
+            <div class="label">Gender</div>
+            <div class="input-content radio-group">
+                <input type="radio" name="g"> Male<br>
+                <input type="radio" name="g"> Female<br>
+                <input type="radio" name="g"> XXX<br>
+                <input type="radio" name="g" checked> ZZZ
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="label">BirthDate</div>
+            <div class="input-content">
+                <input type="text" value="1969-07-02 00:00:00" style="width: 80%;"> (?)
+            </div>
+        </div>
+
+        <div class="section-title">Contact Info</div>
+        
+        <div class="form-group">
+            <div class="label">Email</div>
+            <div class="input-content"><input type="email" placeholder="name@example.com"></div>
+        </div>
+
+        <div class="form-group">
+            <div class="label">Country</div>
+            <div class="input-content">
+                <select>
+                    <option>Russian Federation</option>
+                    <option>Vietnam</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="section-title">Optional Info</div>
+        
+        <div class="form-group">
+            <div class="label">Notes</div>
+            <div class="input-content">
+                <textarea rows="5">Anne has a BA degree in English from St. Lawrence College. She is fluent in French and German.ZZZ</textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="label">Active?</div>
+            <div class="input-content"><input type="checkbox" checked></div>
+        </div>
+
+        <div class="form-group">
+            <div class="label">Are you human?</div>
+            <div class="input-content">
+                <div class="captcha">TIDAWO</div>
+                <small>Click to change</small>
+                <input type="text" style="margin-top: 5px;">
+            </div>
+        </div>
+
+        <div class="footer">
+            <button type="submit">💾 Submit</button>
+            <button type="button">✖ Cancel</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

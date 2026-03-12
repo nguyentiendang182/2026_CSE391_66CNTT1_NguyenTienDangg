@@ -1,0 +1,32 @@
+:root { --primary: #2563eb; --error: #dc2626; --success: #16a34a; }
+body { font-family: sans-serif; background: #f8fafc; padding: 20px; color: #1e293b; }
+.container { max-width: 500px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+h2 { text-align: center; margin-bottom: 25px; color: var(--primary); }
+
+.form-group { margin-bottom: 18px; position: relative; }
+label { display: block; font-weight: 600; margin-bottom: 6px; font-size: 0.9rem; }
+.label-row { display: flex; justify-content: space-between; align-items: center; }
+#charCount { font-size: 0.8rem; color: #64748b; }
+.limit-reached { color: var(--error) !important; font-weight: bold; }
+
+input, select, textarea { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; box-sizing: border-box; font-size: 1rem; }
+input.is-invalid, select.is-invalid, textarea.is-invalid { border-color: var(--error); background: #fef2f2; }
+.error-message { color: var(--error); font-size: 0.8rem; margin-top: 4px; display: block; min-height: 1.2em; }
+
+.radio-group { display: flex; gap: 15px; padding-top: 5px; }
+.total-section { font-size: 1.2rem; font-weight: bold; padding: 15px; background: #eff6ff; border-radius: 8px; text-align: right; margin: 20px 0; border-left: 4px solid var(--primary); }
+#totalPrice { color: var(--primary); }
+
+button { cursor: pointer; border: none; transition: 0.2s; }
+#btnSubmit { width: 100%; background: var(--primary); color: white; padding: 14px; border-radius: 6px; font-size: 1rem; font-weight: bold; }
+#btnSubmit:hover { background: #1d4ed8; }
+
+/* Modal & Overlay */
+.modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); align-items: center; justify-content: center; z-index: 100; }
+.modal-content { background: white; padding: 25px; border-radius: 12px; width: 90%; max-width: 400px; line-height: 1.6; }
+.modal-actions { display: flex; gap: 10px; margin-top: 20px; }
+.btn-primary { flex: 1; background: var(--success); color: white; padding: 10px; border-radius: 4px; }
+.btn-secondary { flex: 1; background: #94a3b8; color: white; padding: 10px; border-radius: 4px; }
+
+.success-overlay { position: fixed; inset: 0; background: white; display: flex; align-items: center; justify-content: center; text-align: center; z-index: 200; }
+.hidden { display: none; }
